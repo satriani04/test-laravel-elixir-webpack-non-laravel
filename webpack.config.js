@@ -1,0 +1,26 @@
+var path = require('path');
+
+module.exports = {
+  resolve: {
+    root: path.resolve('./')
+  },
+  themeLoader: {
+    themes: ['./resources/assets/sass/theme.scss', './node_modules/vuestrap/theme/bootstrap.scss'],
+  },
+  module: {
+    loaders: [{
+      test: /\.vue$/,
+      loader: 'vue'
+    }, {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+    }, {
+      test: /\.html$/,
+      loader: 'html'
+    }, {
+      test: /\.scss$/,
+      loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader!vuestrap-theme-loader'
+    }]
+  }
+};
