@@ -10342,7 +10342,7 @@
 	__vue_script__ = __webpack_require__(9)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] resources\\assets\\js\\components\\App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(10)
+	__vue_template__ = __webpack_require__(15)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -10401,7 +10401,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 	// exports
 
@@ -10686,6 +10686,108 @@
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _About = __webpack_require__(10);
+
+	var _About2 = _interopRequireDefault(_About);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      msg: 'hello dari laravel elixir webpack lorem ipsum dolor sit amet'
+	    };
+	  },
+
+	  components: {
+	    About: _About2.default
+	  }
+	};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(11)
+	__vue_script__ = __webpack_require__(13)
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+	  console.warn("[vue-loader] resources\\assets\\js\\components\\About.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(14)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-4abd4ecd/About.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(12);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(8)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4abd4ecd&scoped=true!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./About.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4abd4ecd&scoped=true!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./About.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(7)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -10696,16 +10798,22 @@
 	exports.default = {
 	  data: function data() {
 	    return {
-	      msg: 'hello dari laravel elixir webpack'
+	      msg: 'ini adalah components about'
 	    };
 	  }
 	};
 
 /***/ }),
-/* 10 */
+/* 14 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div _v-206be561=\"\">\n    {{msg}}\n</div>\n";
+	module.exports = "\n<div _v-4abd4ecd=\"\">\n    <h1 _v-4abd4ecd=\"\">{{msg}}</h1>\n</div>\n";
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n<div _v-206be561=\"\">\n    {{msg}}\n    <about _v-206be561=\"\"></about>\n</div>\n";
 
 /***/ })
 /******/ ]);
